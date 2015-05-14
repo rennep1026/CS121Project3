@@ -36,6 +36,8 @@ if __name__ == '__main__':
         i+=1
 
     # TODO: Add tf-idf calculation.
+    # tf[termID][docID] = log(1 + id2docfreq[termID][docID]) # log of 1 + the number of times that word appears in that document, or 0 if it does not appear
+    # idf[termID][docID] = log(len(doc2termlist) / len(id2docfreq[termID])) # log of number of documents over the number of documents that term appears in
 
     with open('id2docfreq.json', 'w') as f:
         json.dump(id2docfreq, f)
